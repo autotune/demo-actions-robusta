@@ -7,7 +7,7 @@ def report_scheduling_failure(event: ReplicaSetEvent): # We use ReplicaSetEvent 
 
     print(f"This print will be shown in the robusta logs={actual_event}")
 
-    if actual_event.type.casefold() == f'Normal'.casefold() and \
+    if actual_event.type.casefold() == f'Normal'.casefold() and 
         # actual_event.reason.casefold() == f'ScalingReplicaSet'.casefold():
         _report_succeded_scheduling(event, actual_event.involvedObject.name, actual_event.message)
 
